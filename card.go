@@ -1,10 +1,12 @@
 package blackjack
 
-func standerdPack() [52]Card {
-	cards := [52]Card{}
-	for i := 2; i < 15; i++ {
+func standerdPack() []Card {
+	cardsName := [13]string{"A","2","3","4","5","6","7","8","9","10","J","Q","K"}
+	cards := []Card{}
+	for i := 0; i < 13; i++ {
+		cardName  := cardsName[i]
 		for j := 0; j < 4; j++ {
-			
+			cards = append(cards, Card{cardName, i+1})
 		}
 	}
 	return cards

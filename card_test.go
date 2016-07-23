@@ -10,6 +10,15 @@ func TestStanderdPackGives52Cards(t *testing.T) {
 	}
 }
 
+func TestFirstCardOfStanderdPackShouldAce(t *testing.T) {
+	cards := standerdPack()
+	aCard := cards[0]
+	valueOfCard,_ := aCard.Value()
+	if valueOfCard != 1 {
+		t.Errorf("Expected 1, but got %v", valueOfCard)
+	}
+}
+
 func TestCardCanGiveHisValue(t *testing.T){
 	cardJack := Card{"J", 11}
 	valueJack1,valueJack2 := cardJack.Value()	
