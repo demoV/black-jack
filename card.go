@@ -22,7 +22,7 @@ func (c Card)Value() (int,int){
 	if(rank == 1){
 		return 1,11
 	}
-	if(rank > 1 && rank < 9){
+	if(rank > 1 && rank <= 9){
 		return rank,rank
 	}else if(rank >= 10 || rank == 1){
 		return 10,10
