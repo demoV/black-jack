@@ -28,6 +28,15 @@ func TestCardCanGiveHisValue(t *testing.T){
 	if (valueJack2 != 10) {	
 		t.Errorf("Expected 10 value of jack, but got %v", valueJack1)	
 	}
+
+	cardKing := Card{"K", 13}
+	value1OfKing,value2OfKing := cardKing.Value()
+	if (value1OfKing != 10) {	
+		t.Errorf("Expected 10 value of king, but got %v", value1OfKing)	
+	}
+	if (value2OfKing != 10) {	
+		t.Errorf("Expected 10 value of jack, but got %v", value2OfKing)	
+	}
 }
 
 func TestCardAceHasTwoValue1And11(t *testing.T){
