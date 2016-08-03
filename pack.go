@@ -13,3 +13,4 @@ func (pack *Pack)Top() Card{
 func (pack *Pack)Length() int{
 	return len(pack.packCards)
 }
+

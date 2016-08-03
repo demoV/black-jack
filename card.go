@@ -17,7 +17,7 @@ type Card struct {
 	rank int
 }
 
-func (c Card)Value() (int,int){
+func (card Card)Value() (int,int){
 	rank := c.rank
 	if(rank == 1){
 		return 1,11
